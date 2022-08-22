@@ -15,7 +15,14 @@ const app = new Vue({
                     that.myEmail = email
                     that.newEmails.push(email)
                     console.log(that.newEmails)
+
+                    let myList = document.getElementById('myList')
+                let myNewLiElement = document.createElement('li')
+                myList.append(myNewLiElement);
+                myNewLiElement.innerHTML = `${that.newEmails[i]}`
                 })     
+
+                
         }
         
     }
