@@ -7,21 +7,20 @@ const app = new Vue({
 
     mounted() {
         let that = this;
-
-        for(let i = 0; i < 10 ; i++){
-                let ciao = axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+ 
+        for(let i = 0; i < 11 ; i++){
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then( function(content) {
                     let email = content.data.response
                     that.myEmail = email
                     that.newEmails.push(email)
-                    console.log(that.newEmails)
+                
 
-                    let myList = document.getElementById('myList')
-                let myNewLiElement = document.createElement('li')
-                myList.append(myNewLiElement);
-                myNewLiElement.innerHTML = `${that.newEmails[i]}`
-                })     
-
+                // let myList = document.getElementById('myList')
+                // let myNewLiElement = document.createElement('li')
+                // myList.append(myNewLiElement);
+                // myNewLiElement.innerHTML = `${that.newEmails[i]}`
+                })    
                 
         }
         

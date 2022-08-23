@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <ul id="myList">
-            <li>{{myEmail}}</li>
+            <li v-if="newEmails.length == 11" v-for="email in newEmails">{{email}}</li>
         </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
